@@ -1,0 +1,287 @@
+:root{
+  --brand: #FF520F;
+  --light_brand :#FFF8EC;
+  --hover:#FFD6A7;
+}
+
+*{
+    /* margin: 0; */
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 ;
+    padding: 0 ;
+    background: #FFFBEB;
+}
+
+
+/* nav */
+
+.logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--brand);
+}
+
+nav p{
+    font-size: 14px;
+}
+
+.log-icon{
+    width: 50px;
+    height: 50px;
+}
+.border{
+    --bs-border-color: var(--light_brand);
+}
+
+li:hover{
+    color: var(--brand);
+}
+
+
+
+
+
+
+
+
+/* body */
+.bill{
+    width: 40px;
+    height: 10px;
+    padding: 5px 10px;
+    border-radius: 25px;
+    /* background-color: #FFB86A; */
+    font-size: 13px;
+    font-weight: 700;
+}
+.orange{
+    background: var(--light_brand);
+    color: var(--brand);
+}
+.orange:hover{
+    background: var(--hover);
+}
+.light-green{
+    background: #DBFCE7;
+    color: #4D8236;
+}
+
+.light-blue{
+    background: #DBEAFE;
+    color: #1447E6;
+}
+
+.light-yellow{
+    background: #FEF9E8;
+    color: #A67C00;
+}
+
+.light-red{
+    background: #FFEAE8;
+    color: #E15A5A;
+}
+
+.light-purple{
+    background: #F3E8FF;
+    color: #A45AFF;
+}
+
+.tags{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.links{
+    font-size: 18px;
+    
+}
+
+#myTab {
+  --bs-nav-underline-border-width: 2px;  
+    --bs-nav-link-color: #6c757d;                   
+  --bs-nav-link-hover-color: var(--brand);           
+  --bs-nav-underline-link-active-color: var(--brand);
+}
+
+#myTab .nav-link {
+  padding-inline: 16px !important;  /* 3ard el underline: zawwed = a3rad */
+  padding-bottom: 12px !important;  /* el gap ben el kalam wel underline */
+}
+
+.btn {
+  --bs-btn-bg: var(--brand);
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: var(--brand);
+
+  --bs-btn-hover-bg: #e04400;          /* orange ghame2 shwaya */
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-border-color: #e04400;
+
+  --bs-btn-active-bg: #c73c00;         /* lama tedghat 3aleh */
+  --bs-btn-active-border-color: #c73c00;
+
+  transition: background-color .2s, transform .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);        
+}
+
+
+.recipe-media {
+  position: relative;
+  min-height: 420px;
+  /* background-image: url('../assets/photo-1546069901-ba9599a7e63c.jpg'); */
+  background-size: cover;
+  background-position: center;
+}
+
+.rate{
+    width: 190px;
+    height: 50px;
+    padding: 10px 20px;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+.timeline{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+}
+
+/* same height for every tab and every recipe, extra content scrolls */
+#myTabContent{
+    height: 380px;
+    overflow-y: auto;
+}
+
+.steps{
+    list-style: none;
+    counter-reset: step;
+    padding-left: 0;
+    margin: 0;
+}
+
+.steps li{
+    counter-increment: step;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 0;
+    color: #364153;
+}
+
+.steps li::before{
+    content: counter(step);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--brand);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.instructions-steps{
+    list-style: none;
+    counter-reset: step;
+    padding-left: 0;
+    margin: 0;
+}
+.instructions-steps li{
+    counter-increment: step;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 0;
+    color: #364153;
+}
+.instructions-steps li::before{
+    content: counter(step);
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    font-size: 25px;
+    border-radius: 10px;
+    background: var(--brand);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.box{
+    background: var(--light_brand);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* chef's tips */
+.chef-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chef{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px;
+    margin-bottom: 12px;
+    background: #FEFCE8;
+    border-left: 4px solid #FDC700;
+    border-radius: 12px;
+    color: #364153;
+    font-size: 18px;
+}
+
+.chef i{
+    color: #E17100;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+/* long cook time alert */
+.time-alert{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: #FEF2F2;
+    border-left: 4px solid #FB2C36;
+    border-radius: 12px;
+    color: #C10007;
+}
+
+.time-alert i{
+    color: #FB2C36;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.alert-title{
+    color: #9F0712;
+    font-size: 18px;
+}
